@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Cleanliness_Check</class>
+ <widget class="QMainWindow" name="Cleanliness_Check">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1410</width>
+    <height>710</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>150</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QListWidget::item:hover{
+	color: blue;
+}
+
+QListWidget::item:selected{
+	border: 2px solid blue;
+	border-radius: 5px;
+	color: black;
+}
+</string>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <widget class="QWidget" name="fileTab">
+       <attribute name="icon">
+        <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+         <normaloff>:/icon/svgBlack/file.svg</normaloff>:/icon/svgBlack/file.svg</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>File</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QListWidget" name="fileList">
+          <property name="movement">
+           <enum>QListView::Static</enum>
+          </property>
+          <property name="flow">
+           <enum>QListView::LeftToRight</enum>
+          </property>
+          <property name="isWrapping" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="spacing">
+           <number>20</number>
+          </property>
+          <property name="viewMode">
+           <enum>QListView::IconMode</enum>
+          </property>
+          <item>
+           <property name="text">
+            <string>Open file</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/file.svg</normaloff>:/icon/svgBlack/file.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Open folder</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/folder.svg</normaloff>:/icon/svgBlack/folder.svg</iconset>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="cropTab">
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <attribute name="icon">
+        <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+         <normaloff>:/icon/svgBlack/crop.svg</normaloff>:/icon/svgBlack/crop.svg</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Crop Image</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QListWidget" name="cropList">
+          <property name="movement">
+           <enum>QListView::Static</enum>
+          </property>
+          <property name="flow">
+           <enum>QListView::LeftToRight</enum>
+          </property>
+          <property name="isWrapping" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="spacing">
+           <number>20</number>
+          </property>
+          <property name="viewMode">
+           <enum>QListView::IconMode</enum>
+          </property>
+          <item>
+           <property name="text">
+            <string>Cut Infor</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/rectangle.svg</normaloff>:/icon/svgBlack/rectangle.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Use Mask</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/circle.svg</normaloff>:/icon/svgBlack/circle.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Config</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/tool.svg</normaloff>:/icon/svgBlack/tool.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Apply</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/ok-circle.svg</normaloff>:/icon/svgBlack/ok-circle.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Reset</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/refresh.svg</normaloff>:/icon/svgBlack/refresh.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Save</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/save.svg</normaloff>:/icon/svgBlack/save.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>All folder</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/forward.svg</normaloff>:/icon/svgBlack/forward.svg</iconset>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="generateTab">
+       <attribute name="icon">
+        <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+         <normaloff>:/icon/svgBlack/cards.svg</normaloff>:/icon/svgBlack/cards.svg</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Generate</string>
+       </attribute>
+       <widget class="QListWidget" name="generateList">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1401</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="movement">
+         <enum>QListView::Static</enum>
+        </property>
+        <property name="isWrapping" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="spacing">
+         <number>20</number>
+        </property>
+        <property name="viewMode">
+         <enum>QListView::IconMode</enum>
+        </property>
+        <item>
+         <property name="text">
+          <string>Config</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+           <normaloff>:/icon/svgBlack/tool.svg</normaloff>:/icon/svgBlack/tool.svg</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Apply</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+           <normaloff>:/icon/svgBlack/ok-circle.svg</normaloff>:/icon/svgBlack/ok-circle.svg</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Save</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+           <normaloff>:/icon/svgBlack/save.svg</normaloff>:/icon/svgBlack/save.svg</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>All Folder</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+           <normaloff>:/icon/svgBlack/forward.svg</normaloff>:/icon/svgBlack/forward.svg</iconset>
+         </property>
+        </item>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="superResolutionTab">
+       <attribute name="icon">
+        <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+         <normaloff>:/icon/svgBlack/verified.svg</normaloff>:/icon/svgBlack/verified.svg</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Super resolution</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QListWidget" name="superResolutionList">
+          <property name="movement">
+           <enum>QListView::Static</enum>
+          </property>
+          <property name="isWrapping" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="spacing">
+           <number>20</number>
+          </property>
+          <property name="viewMode">
+           <enum>QListView::IconMode</enum>
+          </property>
+          <item>
+           <property name="text">
+            <string>Config</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/tool.svg</normaloff>:/icon/svgBlack/tool.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Apply</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/ok-circle.svg</normaloff>:/icon/svgBlack/ok-circle.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Reset</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/refresh.svg</normaloff>:/icon/svgBlack/refresh.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Save</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/save.svg</normaloff>:/icon/svgBlack/save.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>All Folder</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/forward.svg</normaloff>:/icon/svgBlack/forward.svg</iconset>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="SegmentTab">
+       <attribute name="title">
+        <string>Segmentation</string>
+       </attribute>
+       <widget class="QListWidget" name="segmentList">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1401</width>
+          <height>106</height>
+         </rect>
+        </property>
+        <property name="movement">
+         <enum>QListView::Static</enum>
+        </property>
+        <property name="isWrapping" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="spacing">
+         <number>20</number>
+        </property>
+        <property name="viewMode">
+         <enum>QListView::IconMode</enum>
+        </property>
+        <item>
+         <property name="text">
+          <string>Config</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+           <normaloff>:/icon/svgBlack/tool.svg</normaloff>:/icon/svgBlack/tool.svg</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Apply</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+           <normaloff>:/icon/svgBlack/ok-circle.svg</normaloff>:/icon/svgBlack/ok-circle.svg</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Reset</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+           <normaloff>:/icon/svgBlack/refresh.svg</normaloff>:/icon/svgBlack/refresh.svg</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Save</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+           <normaloff>:/icon/svgBlack/save.svg</normaloff>:/icon/svgBlack/save.svg</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>All Folder</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+           <normaloff>:/icon/svgBlack/forward.svg</normaloff>:/icon/svgBlack/forward.svg</iconset>
+         </property>
+        </item>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="evaluateTab">
+       <attribute name="title">
+        <string>Evaluate SR</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_21">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QListWidget" name="evaluateList">
+          <property name="movement">
+           <enum>QListView::Static</enum>
+          </property>
+          <property name="isWrapping" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="spacing">
+           <number>20</number>
+          </property>
+          <property name="viewMode">
+           <enum>QListView::IconMode</enum>
+          </property>
+          <item>
+           <property name="text">
+            <string>Config</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/tool.svg</normaloff>:/icon/svgBlack/tool.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Apply</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/ok-circle.svg</normaloff>:/icon/svgBlack/ok-circle.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Reset</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/refresh.svg</normaloff>:/icon/svgBlack/refresh.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Save</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/save.svg</normaloff>:/icon/svgBlack/save.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>All Folder</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/forward.svg</normaloff>:/icon/svgBlack/forward.svg</iconset>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="cleanlinessTab">
+       <attribute name="icon">
+        <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+         <normaloff>:/icon/svgBlack/search.svg</normaloff>:/icon/svgBlack/search.svg</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Cleanliness Check</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QListWidget" name="cleanlinessList">
+          <property name="movement">
+           <enum>QListView::Static</enum>
+          </property>
+          <property name="flow">
+           <enum>QListView::LeftToRight</enum>
+          </property>
+          <property name="isWrapping" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="spacing">
+           <number>20</number>
+          </property>
+          <property name="viewMode">
+           <enum>QListView::IconMode</enum>
+          </property>
+          <item>
+           <property name="text">
+            <string>Config</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/tool.svg</normaloff>:/icon/svgBlack/tool.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Apply</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/ok-circle.svg</normaloff>:/icon/svgBlack/ok-circle.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Reset</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/refresh.svg</normaloff>:/icon/svgBlack/refresh.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Save</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/save.svg</normaloff>:/icon/svgBlack/save.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>All Folder</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/forward.svg</normaloff>:/icon/svgBlack/forward.svg</iconset>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="dicomTab">
+       <attribute name="icon">
+        <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+         <normaloff>:/icon/svgBlack/exit.svg</normaloff>:/icon/svgBlack/exit.svg</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Export DICOM</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QListWidget" name="dicomList">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="movement">
+           <enum>QListView::Static</enum>
+          </property>
+          <property name="flow">
+           <enum>QListView::LeftToRight</enum>
+          </property>
+          <property name="isWrapping" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="spacing">
+           <number>20</number>
+          </property>
+          <property name="viewMode">
+           <enum>QListView::IconMode</enum>
+          </property>
+          <item>
+           <property name="text">
+            <string>Meta Data</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/link.svg</normaloff>:/icon/svgBlack/link.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Export</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/exit.svg</normaloff>:/icon/svgBlack/exit.svg</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>All Folder</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Cắt ảnh verson 1.2/resources.qrc">
+             <normaloff>:/icon/svgBlack/forward.svg</normaloff>:/icon/svgBlack/forward.svg</iconset>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QTreeView" name="treeView">
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="content" native="true">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="1">
+           <widget class="QWidget" name="widget_4" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QSpinBox" name="xStart">
+               <property name="maximum">
+                <number>9999</number>
+               </property>
+               <property name="value">
+                <number>0</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_2">
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <widget class="QRadioButton" name="SR2">
+                  <property name="text">
+                   <string>2</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="SR4">
+                  <property name="text">
+                   <string>4</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="SR8">
+                  <property name="text">
+                   <string>8</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="xEnd">
+               <property name="maximum">
+                <number>9999</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QWidget" name="widget_5" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_12">
+             <item>
+              <widget class="QSpinBox" name="yStart">
+               <property name="maximum">
+                <number>9999</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame">
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="yEnd">
+               <property name="maximum">
+                <number>9999</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QWidget" name="widget_2" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_14">
+             <item>
+              <widget class="QWidget" name="widget_3" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <widget class="QFrame" name="frame_1">
+                  <property name="autoFillBackground">
+                   <bool>true</bool>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_4">
+                   <item row="0" column="0">
+                    <widget class="QFrame" name="frame_20">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout">
+                      <item>
+                       <widget class="QLabel" name="label_29">
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>10</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Evaluate</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="worstx2">
+                        <property name="font">
+                         <font>
+                          <pointsize>8</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>1 Worst</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="poorx2">
+                        <property name="font">
+                         <font>
+                          <pointsize>8</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>2 Poor</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="goodx2">
+                        <property name="font">
+                         <font>
+                          <pointsize>8</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>3 Good</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="betterx2">
+                        <property name="font">
+                         <font>
+                          <pointsize>8</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>4 Better</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="excellentx2">
+                        <property name="font">
+                         <font>
+                          <pointsize>8</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>5 Excellent</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="0" column="1" rowspan="2">
+                    <widget class="QFrame" name="frame_21">
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_2">
+                      <item>
+                       <widget class="QLabel" name="label_38">
+                        <property name="text">
+                         <string>Description</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QTextEdit" name="descriptionx2"/>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="frame_6">
+                  <property name="autoFillBackground">
+                   <bool>true</bool>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_6">
+                   <item row="0" column="0">
+                    <widget class="QFrame" name="frame_22">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_5">
+                      <item>
+                       <widget class="QLabel" name="label_30">
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>40</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>10</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>Evaluate</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="worstx4">
+                        <property name="font">
+                         <font>
+                          <pointsize>8</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>1 Worst</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="poorx4">
+                        <property name="font">
+                         <font>
+                          <pointsize>8</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>2 Poor</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="goodx4">
+                        <property name="font">
+                         <font>
+                          <pointsize>8</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>3 Good</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="betterx4">
+                        <property name="font">
+                         <font>
+                          <pointsize>8</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>4 Better</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="excellentx4">
+                        <property name="font">
+                         <font>
+                          <pointsize>8</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>5 Excellent</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="0" column="1" rowspan="2">
+                    <widget class="QFrame" name="frame_23">
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_8">
+                      <item>
+                       <widget class="QLabel" name="label_39">
+                        <property name="text">
+                         <string>Description</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QTextEdit" name="descriptionx4"/>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnNextx4">
+               <property name="text">
+                <string>Next</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QWidget" name="container" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QFrame" name="frame_3">
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_9">
+                <item>
+                 <widget class="QLabel" name="sourceImage">
+                  <property name="text">
+                   <string>Source Image</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGraphicsView" name="gVSource"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_4">
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_10">
+                <item>
+                 <widget class="QLabel" name="destinationImage">
+                  <property name="text">
+                   <string>x2</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGraphicsView" name="gVx2">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_5">
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_11">
+                <item>
+                 <widget class="QLabel" name="destinationImage_2">
+                  <property name="text">
+                   <string>x4</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGraphicsView" name="gVx4"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
